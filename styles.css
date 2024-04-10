@@ -16,7 +16,8 @@ body {
 }
 
 .container {
-    position: relative;
+    position: absolute;
+    top: 3%;
     width: 85%; 
     height: 80%; 
     border-radius: 10px;
@@ -91,6 +92,7 @@ button:hover{
 }
 
 .weather_container{
+    height: 100%;
     margin-top: 5%;
     display: grid;
     gap: 20px;
@@ -142,7 +144,17 @@ button:hover{
   
   @media only screen and (min-width: 768px) {
      .container{
-        width: 800px;
+        width: 40%;
      }
   }
   
+  @media only screen and (max-height: 650px) {
+    .container {
+        height: 600px; /* Set a fixed height for the container */
+        width: 500px;
+        overflow-y: scroll; /* Enable vertical scrolling */
+    }
+}
+
+
+
